@@ -1,0 +1,495 @@
+.preview {
+    padding-bottom: 20px;
+
+    &__big-banner {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 390px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .6) 100%);
+        }
+    }
+
+    &__frame {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        z-index: -1;
+        display: block;
+    }
+
+    &__frame-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__hospital-info {
+        margin-top: -80px;
+        padding-left: 90px;
+    }
+}
+
+.data {
+    background-color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 330px;
+    padding: 34px 55px 28px 30px;
+    position: relative;
+    z-index: 4;
+
+    &__toggle-button {
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #C0D3FE;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -15px;
+        right: 60px;
+    }
+
+    &__button-icon {
+        height: 15px;
+        width: 15px;
+        fill: #06CF9A;
+    }
+
+    &__name {
+        font-family: 'Avenir Next Cyr Demi';
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+        display: block;
+        margin-bottom: 9px;
+    }
+
+    &__address {
+        color: #000000;
+        font-family: 'Avenir Next Cyr Medium';
+        font-size: 14px;
+        font-style: normal;
+        margin-bottom: 20px;
+    }
+
+    &__phone-list {
+        margin-bottom: 20px;
+    }
+
+    &__phone-item {
+        font-family: 'Avenir Next Cyr Demi';
+        font-size: 14px;
+        color: black;
+        display: block;
+        width: fit-content;
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.work-time {
+    &__title {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 10px;
+    }
+
+    &__value {
+        font-family: 'Avenir Next Cyr Demi';
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    &__status {
+        font-family: 'Avenir Next Cyr Regular';
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__item {
+        $work: '.work-time';
+        &--active {
+            #{$work} {
+                &__day, &__time {
+                    font-family: 'Avenir Next Cyr Demi';
+                }
+            }
+        }
+    }
+
+    &__day {
+        min-width: 69px;
+        margin-right: 21px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        display: inline-block;
+    }
+
+    &__time {
+        font-size: 14px;
+    }
+}
+
+.hospital-info {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    &__logo {
+        min-width: 160px;
+        width: 160px;
+        height: 160px;
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: white;
+        margin-right: 30px;
+    }
+
+    &__logo-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    &__sub-title {
+        font-size: 18px;
+        display: block;
+        color: white;
+        flex-grow: 2;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    &__stars {
+        margin-right: 10px;
+    }
+
+    &__reviews-value {
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 24px;
+    }
+
+    &__numbers {
+        margin-right: 29px;
+    }
+
+    &__numbers-services {
+        flex-grow: 2;
+    }
+
+    &__work {
+        min-width: 170px;
+        margin-right: 10px;
+    }
+
+    &__about {
+        min-width: 120px;
+        margin-right: 10px;
+    }
+
+    &__button-photo {
+        min-width: 90px;
+        margin-right: 10px;
+    }
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    
+    &__value {
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 4px;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 17px;
+        fill: #06CF9A;
+    }
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+        fill: #06CF9A;
+        margin-right: 9px;
+    }
+
+    &__value {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.numbers-services {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        height: 17px;
+        width: 16px;
+        fill: #06CF9A;
+        margin-right: 10px;
+    }
+
+    &__value {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.location-icon {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #C0D3FE;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__value {
+        height: 21px;
+        width: 21px;
+    }
+}
+
+.button {
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #010101;
+    border: 1px solid #C0D3FE;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    transition: all .3s;
+
+    &:hover {
+        border-color:#00D7A9;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .preview {
+        &__hospital-info {
+            padding-left: 40px;
+            margin-top: -60px;
+        }
+
+        &__big-banner {
+            height: 500px;
+        }
+    }
+
+    .hospital-info {
+        &__logo {
+            min-width: 120px;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        &__sub-title {
+            font-size: 16px;
+        }
+
+        &__reviews-value {
+            font-size: 14px;
+        }
+
+        &__bottom {
+            padding-bottom: 10px;
+        }
+    }
+
+    .stars {
+        &__value {
+            font-size: 14px;
+        }
+    }
+
+    .numbers {
+        &__value {
+            font-size: 14px;
+        }
+    }
+
+    .numbers-services {
+        &__value {
+            font-size: 14px;
+        }
+    }
+
+    .button {
+        height: 35px;
+        padding: 0 10px;
+    }
+
+    .location-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .preview {
+        &__hospital-info {
+            padding-top: 20px;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        &__big-banner {
+            height: 400px;
+        }
+    }
+
+    .hospital-info {
+        &__title {
+            color: black;
+        }
+
+        &__sub-title {
+            color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hospital-info {
+        &__logo {
+            min-width: 90px;
+            height: 90px;
+            width: 90px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__sub-title {
+            font-size: 14px;
+        }
+
+        &__bottom {
+            flex-wrap: wrap;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .preview {
+        &__big-banner {
+            height: 350px;
+        }
+    }
+
+    .data {
+        padding: 15px;
+
+        &__name {
+            font-size: 14px;
+        }
+
+        &__address {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        &__phone-list {
+            margin-bottom: 10px;
+        }
+
+        &__phone-item {
+            font-size: 12px;
+        }
+    }
+
+    .work-time {
+        &__value {
+            font-size: 14px;
+        }
+
+        &__status {
+            font-size: 12px;
+        }
+
+        &__day,
+        &__time {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    .hospital-info {
+        flex-wrap: wrap;
+
+        &__logo,
+        &__numbers,
+        &__sub-title,
+        &__reviews-value,
+        &__stars,
+        &__work,
+        &__numbers-services {
+            margin-bottom: 10px;
+        }
+    }
+}
