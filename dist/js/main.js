@@ -168,7 +168,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-doctor-slider', {
   slidesPerView: 1,
-  spaceBetween: 0,
   pagination: {
     el: '.swiper-pagination'
   },
@@ -177,11 +176,12 @@ var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-doctor-slid
     prevEl: '.swiper-button-prev'
   },
   breakpoints: {
-    1200: {
-      slidesPerView: 3
-    },
     1500: {
       slidesPerView: 4
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30
     },
     992: {
       slidesPerView: 3,

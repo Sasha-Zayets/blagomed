@@ -1,6 +1,7 @@
 .doctor-list {
     padding: 56px 0 83px 0;
     position: relative;
+
     &:after {
         content: "";
         height: 100%;
@@ -33,6 +34,16 @@
         width: calc((100% / 3) - 20px);
     }
 
+    &__elements {
+        .swiper-container {
+            margin: 0 -30px;
+            padding: 30px 30px 130px 30px;
+        }
+
+        .swiper-wrapper {
+            z-index: 3;
+        }
+    }
     &__pagination {
         width: fit-content;
         min-width: 450px;

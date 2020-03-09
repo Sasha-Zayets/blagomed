@@ -1609,6 +1609,15 @@ body {
   width: calc((100% / 3) - 20px);
 }
 
+.doctor-list__elements .swiper-container {
+  margin: 0 -30px;
+  padding: 30px 30px 130px 30px;
+}
+
+.doctor-list__elements .swiper-wrapper {
+  z-index: 3;
+}
+
 .doctor-list__pagination {
   width: fit-content;
   min-width: 450px;
@@ -1879,6 +1888,7 @@ body {
 
 .footer {
   padding-bottom: 20px;
+  margin-top: -130px;
 }
 
 .footer__top-wrapper {
